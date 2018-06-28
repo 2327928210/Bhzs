@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义半圆形加载进度条-->
+    <declare-styleable name="myimageview">
+
+        <attr name="src_n" format="integer"></attr>
+        <attr name="src_s" format="integer"></attr>
+
+    </declare-styleable>
+</resources>

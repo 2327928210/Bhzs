@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context="com.haoke.bhzs.Control.InputLevel.InputLevelActivity">
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title" />
+
+    <RelativeLayout
+        android:id="@+id/inputlevel_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_y_60">
+
+        <View
+            android:id="@+id/inputlevel_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_y_2"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_aaa" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <com.haoke.bhzs.Utils.View.MyImageView
+                android:id="@+id/inputlevel_home_image"
+                android:layout_marginLeft="@dimen/layout_x_15"
+                android:layout_width="@dimen/layout_x_30"
+                android:layout_height="@dimen/layout_x_30"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:gravity="center"
+                android:scaleType="fitXY"
+                android:src="@mipmap/home_icon_normat"
+                app:src_n="@mipmap/home_icon_normat"
+                app:src_s="@mipmap/home_icon_pressed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/layout_x_50"
+                android:gravity="center_vertical"
+                android:text="@string/InputLevel"
+                android:textColor="@color/bai"
+                android:textSize="@dimen/layout_x_23" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/layout_x_20"
+            android:clickable="true"
+            android:src="@mipmap/nav_logo" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/layout_y_50"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_y_270"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/inputlevel_myView1_lin1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/inputlevel_myView1_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/colorLv"
+                    android:textSize="@dimen/layout_x_25" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dB"
+                    android:textColor="@color/color_aaa"
+                    android:textSize="@dimen/layout_x_18" />
+            </LinearLayout>
+
+            <com.haoke.bhzs.Utils.View.MyView
+                android:id="@+id/inputlevel_myView1"
+                android:layout_width="@dimen/layout_x_180"
+                android:layout_height="@dimen/layout_x_180"
+                android:layout_below="@+id/inputlevel_myView1_lin1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/layout_y_15"
+                android:background="@color/background"
+                app:Max="100"
+                app:nei_color="@color/colorLv"
+                app:nei_normal_color="@color/colorBai"
+                app:nei_roundWidth="4"
+                app:wai_color="@color/colorLv"
+                app:wai_normal_color="@color/colorHei"
+                app:wai_roundWidth="8" />
+
+            <TextView
+                android:layout_below="@+id/inputlevel_myView1"
+                android:layout_marginTop="@dimen/layout_y_20"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Analog1"
+                android:textColor="@color/color_fff"
+                android:textSize="@dimen/layout_x_20"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/inputlevel_myView1_lin2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/inputlevel_myView2_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/colorLv"
+                    android:textSize="@dimen/layout_x_25" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dB"
+                    android:textColor="@color/color_aaa"
+                    android:textSize="@dimen/layout_x_18" />
+            </LinearLayout>
+
+            <com.haoke.bhzs.Utils.View.MyView
+                android:id="@+id/inputlevel_myView2"
+                android:layout_width="@dimen/layout_x_180"
+                android:layout_height="@dimen/layout_x_180"
+                android:layout_below="@+id/inputlevel_myView1_lin2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/layout_y_15"
+                android:background="@color/background"
+                app:Max="100"
+                app:nei_color="@color/colorLv"
+                app:nei_normal_color="@color/colorBai"
+                app:nei_roundWidth="4"
+                app:wai_color="@color/colorLv"
+                app:wai_normal_color="@color/colorHei"
+                app:wai_roundWidth="8" />
+            <TextView
+                android:layout_below="@+id/inputlevel_myView2"
+                android:layout_marginTop="@dimen/layout_y_20"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Analog2"
+                android:textColor="@color/color_fff"
+                android:textSize="@dimen/layout_x_20"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/layout_y_50"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_y_270"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/inputlevel_myView3_lin3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/inputlevel_myView3_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/colorLv"
+                    android:textSize="@dimen/layout_x_25" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dB"
+                    android:textColor="@color/color_aaa"
+                    android:textSize="@dimen/layout_x_18" />
+            </LinearLayout>
+
+            <com.haoke.bhzs.Utils.View.MyView
+                android:id="@+id/inputlevel_myView3"
+                android:layout_width="@dimen/layout_x_180"
+                android:layout_height="@dimen/layout_x_180"
+                android:layout_below="@+id/inputlevel_myView3_lin3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/layout_y_15"
+                android:background="@color/background"
+                app:Max="100"
+                app:nei_color="@color/colorLv"
+                app:nei_normal_color="@color/colorBai"
+                app:nei_roundWidth="4"
+                app:wai_color="@color/colorLv"
+                app:wai_normal_color="@color/colorHei"
+                app:wai_roundWidth="8" />
+
+            <TextView
+                android:layout_below="@+id/inputlevel_myView3"
+                android:layout_marginTop="@dimen/layout_y_20"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Analog3"
+                android:textColor="@color/color_fff"
+                android:textSize="@dimen/layout_x_20"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/inputlevel_myView4_lin4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/inputlevel_myView4_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/colorLv"
+                    android:textSize="@dimen/layout_x_25" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dB"
+                    android:textColor="@color/color_aaa"
+                    android:textSize="@dimen/layout_x_18" />
+            </LinearLayout>
+
+            <com.haoke.bhzs.Utils.View.MyView
+                android:id="@+id/inputlevel_myView4"
+                android:layout_width="@dimen/layout_x_180"
+                android:layout_height="@dimen/layout_x_180"
+                android:layout_below="@+id/inputlevel_myView4_lin4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/layout_y_15"
+                android:background="@color/background"
+                app:Max="100"
+                app:nei_color="@color/colorLv"
+                app:nei_normal_color="@color/colorBai"
+                app:nei_roundWidth="4"
+                app:wai_color="@color/colorLv"
+                app:wai_normal_color="@color/colorHei"
+                app:wai_roundWidth="8" />
+            <TextView
+                android:layout_below="@+id/inputlevel_myView4"
+                android:layout_marginTop="@dimen/layout_y_20"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Analog4"
+                android:textColor="@color/color_fff"
+                android:textSize="@dimen/layout_x_20"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

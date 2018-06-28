@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.haoke.bhzs.Control.AdvancedTuning.Fragment.CH_Level_Fragment">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/chlevel_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/layout_y_15"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:id="@+id/chlevel_image_point1"
+            android:layout_width="@dimen/layout_x_8"
+            android:layout_height="@dimen/layout_x_8"
+            android:src="@mipmap/ok_pressed"/>
+        <ImageView
+            android:id="@+id/chlevel_image_point2"
+            android:layout_width="@dimen/layout_x_8"
+            android:layout_height="@dimen/layout_x_8"
+            android:layout_marginLeft="@dimen/layout_x_15"
+            android:src="@mipmap/ok_pressed"/>
+        <ImageView
+            android:id="@+id/chlevel_image_point3"
+            android:layout_width="@dimen/layout_x_8"
+            android:layout_height="@dimen/layout_x_8"
+            android:layout_marginLeft="@dimen/layout_x_15"
+            android:src="@mipmap/ok_pressed"/>
+        <ImageView
+            android:id="@+id/chlevel_image_point4"
+            android:layout_width="@dimen/layout_x_8"
+            android:layout_height="@dimen/layout_x_8"
+            android:layout_marginLeft="@dimen/layout_x_15"
+            android:src="@mipmap/ok_pressed"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

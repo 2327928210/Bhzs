@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义半圆形加载进度条-->
+    <declare-styleable name="myview">
+        <attr name="wai_normal_color" format="color"/>
+        <attr name="wai_color" format="color"/>
+        <attr name="nei_normal_color" format="color"/>
+        <attr name="nei_color" format="color"/>
+        <attr name="wai_roundWidth" format="float"></attr>
+        <attr name="nei_roundWidth" format="float"></attr>
+        <attr name="Max" format="integer"></attr>
+
+    </declare-styleable>
+</resources>

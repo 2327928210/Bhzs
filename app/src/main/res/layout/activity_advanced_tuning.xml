@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.haoke.bhzs.Control.AdvancedTuning.AdvancedTuningActivity">
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title" />
+<!--title-->
+    <RelativeLayout
+        android:id="@+id/manager_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_y_60">
+
+        <View
+            android:id="@+id/adavanced_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_y_2"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_aaa" />
+
+        <LinearLayout
+            android:id="@+id/advanced_home_lin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <com.haoke.bhzs.Utils.View.MyImageView
+                android:id="@+id/advanced_home_image"
+                android:layout_marginLeft="@dimen/layout_x_15"
+                android:layout_width="@dimen/layout_x_30"
+                android:layout_height="@dimen/layout_x_30"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:gravity="center"
+                android:scaleType="fitXY"
+                android:src="@mipmap/home_icon_normat"
+                app:src_n="@mipmap/home_icon_normat"
+                app:src_s="@mipmap/home_icon_pressed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/layout_x_15"
+                android:gravity="center_vertical"
+                android:text="@string/ADVANCEDTUNING"
+                android:textColor="@color/bai"
+                android:textSize="@dimen/layout_x_23" />
+        </LinearLayout>
+        <com.haoke.bhzs.Utils.View.MyImageView
+            android:layout_toRightOf="@+id/advanced_home_lin"
+            android:id="@+id/advanced_home_go"
+            android:layout_marginLeft="@dimen/layout_x_15"
+            android:layout_width="@dimen/layout_x_25"
+            android:layout_height="@dimen/layout_x_30"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/advance_normat"
+            app:src_n="@mipmap/advance_normat"
+            app:src_s="@mipmap/advance_pressed" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/layout_x_20"
+            android:clickable="true"
+            android:src="@mipmap/nav_logo" />
+
+    </RelativeLayout>
+
+    <!--main-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:id="@+id/adavancedtuning_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_y_2"
+            android:background="@color/color_aaa"
+            android:layout_above="@+id/activity_home_radiogroup" />
+
+        <FrameLayout
+            android:id="@+id/activity_advancedtuning_framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/adavancedtuning_view"></FrameLayout>
+
+        <RadioGroup
+            android:id="@+id/activity_home_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/background"
+            android:orientation="horizontal">
+
+            <!--CHLevel-->
+            <RadioButton
+                android:id="@+id/activity_home_rb_ch_level"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_y_8"
+                android:layout_marginTop="@dimen/layout_y_8"
+                android:drawablePadding="@dimen/layout_x_2"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/main_activity_radion_ch_level"
+                android:gravity="center"
+                android:text="@string/CHLevel"
+                android:textColor="@color/colorLv"
+                android:textSize="@dimen/layout_x_15" />
+
+            <!--CHDelay-->
+            <RadioButton
+                android:id="@+id/activity_home_rb_ch_delay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_y_8"
+                android:layout_marginTop="@dimen/layout_y_8"
+                android:drawablePadding="@dimen/layout_x_2"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/main_activity_radiobutton_ch_delay"
+                android:gravity="center"
+                android:text="@string/CHDelay"
+                android:textColor="@color/bai"
+                android:textSize="@dimen/layout_x_15" />
+            <!--Crossover-->
+            <RadioButton
+                android:id="@+id/activity_home_rb_crossover"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_y_8"
+                android:layout_marginTop="@dimen/layout_y_8"
+                android:drawablePadding="@dimen/layout_x_2"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/main_activity_radionbutton_crossover"
+                android:gravity="center"
+                android:text="@string/Crossover"
+                android:textColor="@color/bai"
+                android:textSize="@dimen/layout_x_15" />
+
+            <!--EQ-->
+            <RadioButton
+                android:id="@+id/activity_home_rb_eq"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_y_8"
+                android:layout_marginTop="@dimen/layout_y_8"
+                android:drawablePadding="@dimen/layout_x_2"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/main_activity_radionbutton_eq"
+                android:gravity="center"
+                android:text="@string/EQ"
+                android:textColor="@color/bai"
+                android:textSize="@dimen/layout_x_15" />
+
+            <!--RTA-->
+            <RadioButton
+                android:id="@+id/activity_home_rb_rta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_y_8"
+                android:layout_marginTop="@dimen/layout_y_8"
+                android:drawablePadding="@dimen/layout_x_2"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/main_activity_radionbutton_rta"
+                android:gravity="center"
+                android:text="@string/RTA"
+                android:textColor="@color/bai"
+                android:textSize="@dimen/layout_x_15" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</LinearLayout>

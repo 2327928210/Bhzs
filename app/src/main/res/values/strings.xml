@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Bhzs</string>
+    <string name="language">CN</string>
+    <!-- TODO: MainActivity -->
+    <string name="CHLevel">CH Level</string>
+    <string name="CHDelay">CH Delay</string>
+    <string name="Crossover">Crossover</string>
+    <string name="EQ">EQ</string>
+    <string name="RTA">RTA</string>
+    <string name="exitApp">再按一次退出程序</string>
+    <string name="HOME">HOME</string>
+
+    <string name="MODE">MODE</string>
+    <string name="TUNE">TUNE</string>
+    <string name="CONNECT">CONNECT</string>
+    <string name="SETUP">SETUP</string>
+
+    <string name="ANALOG">ANALOG</string>
+    <string name="SPDIF">SPDIF</string>
+    <string name="STREAMING">STREAMING</string>
+
+
+    <string name="Connected">Connected</string>
+    <string name="WiFi">WiFi not enabled please enable WiFi in the phone setting</string>
+    <string name="OK">OK</string>
+
+    <string name="OutputSetting">Output Setting</string>
+    <string name="ManagerPreset">Manager Preset</string>
+    <string name="Preferences">Preferences</string>
+    <string name="SetupWizard">Setup Wizard</string>
+
+    <string name="InputLevel">INPUT LEVEL</string>
+    <string name="Adavancedtuning">Adavanced tuning</string>
+
+    <!-- TODO: ManagerprestActivity -->
+
+    <string name="MANAGERPRESET">MANAGER PRESET</string>
+
+    <string name="DevicePreset">Device Preset:</string>
+    <string name="CHEQ">CH EQ:</string>
+    <string name="InEQ">In EQ:</string>
+    <string name="CHLevel2">CH Level:</string>
+    <string name="CHDelay2">CH Delay:</string>
+    <string name="Crossover2">Crossover:</string>
+
+
+    <string name="Datadown">Data download from cellphone</string>
+    <string name="Datasave">data save to cellphone</string>
+
+    <!-- TODO: PreferencesActivity -->
+    <string name="PREFERENCES">PREFERENCES</string>
+    <string name="Externalremotecontrol">External remote control</string>
+    <string name="Enable">Enable</string>
+    <string name="Disable">Disable</string>
+    <string name="MaxInputlevel">Max input level</string>
+    <string name="Maxoutputlevel">Max output level</string>
+
+    <!-- TODO: InputLevelActivity -->
+    <string name="INPUTLEVEL">INPUT LEVEL</string>
+    <string name="Analog1">Analog 1+2</string>
+    <string name="Analog2">Analog 3+4</string>
+    <string name="Analog3">Analog 5+6</string>
+    <string name="Analog4">Digital L+R</string>
+
+    <!-- TODO: AdvanceActivity -->
+    <string name="ADVANCEDTUNING">ADVANCED TUNING</string>
+
+    <!-- TODO: OutputSeetingActivity -->
+    <string name="OUTPUTSEETING">OUTPUT SEETING</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

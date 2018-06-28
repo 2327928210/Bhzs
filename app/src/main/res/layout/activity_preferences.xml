@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context="com.haoke.bhzs.Control.Preferences.PreferencesActivity">
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title" />
+
+    <RelativeLayout
+        android:id="@+id/manager_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_y_60">
+
+        <View
+            android:id="@+id/adavanced_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_y_2"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_aaa" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <com.haoke.bhzs.Utils.View.MyImageView
+                android:id="@+id/preferences_home_image"
+                android:layout_marginLeft="@dimen/layout_x_15"
+                android:layout_width="@dimen/layout_x_30"
+                android:layout_height="@dimen/layout_x_30"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:gravity="center"
+                android:scaleType="fitXY"
+                android:src="@mipmap/home_icon_normat"
+                app:src_n="@mipmap/home_icon_normat"
+                app:src_s="@mipmap/home_icon_pressed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/layout_x_50"
+                android:gravity="center_vertical"
+                android:text="@string/PREFERENCES"
+                android:textColor="@color/bai"
+                android:textSize="@dimen/layout_x_23" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/layout_x_20"
+            android:clickable="true"
+            android:src="@mipmap/nav_logo" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/layout_y_30"
+        android:layout_marginLeft="@dimen/layout_x_20"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Externalremotecontrol"
+            android:textColor="@color/bai"
+            android:textSize="@dimen/layout_x_20"
+            android:layout_gravity="center_vertical"/>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/layout_y_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/preferences_enable_btn"
+                android:layout_width="@dimen/layout_x_150"
+                android:layout_height="@dimen/layout_x_40"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:text="@string/Enable"
+                android:textColor="@color/color_333"
+                android:background="@mipmap/button_normat"
+                />
+            <Button
+                android:layout_marginLeft="@dimen/layout_x_30"
+                android:id="@+id/preferences_disable_btn"
+                android:layout_width="@dimen/layout_x_150"
+                android:layout_height="@dimen/layout_x_40"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:text="@string/Disable"
+                android:textColor="@color/color_333"
+                android:background="@mipmap/button_normat"
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_marginTop="@dimen/layout_y_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/MaxInputlevel"
+            android:textColor="@color/bai"
+            android:textSize="@dimen/layout_x_20"
+            android:layout_gravity="center_vertical"/>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/layout_y_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/preferences_input1_btn"
+                android:layout_width="@dimen/layout_x_150"
+                android:layout_height="@dimen/layout_x_40"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:text="0"
+                android:textColor="@color/color_333"
+                android:background="@mipmap/button_normat"
+                />
+            <Button
+                android:layout_marginLeft="@dimen/layout_x_30"
+                android:id="@+id/preferences_input2_btn"
+                android:layout_width="@dimen/layout_x_150"
+                android:layout_height="@dimen/layout_x_40"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:text="+6dB"
+                android:textColor="@color/color_333"
+                android:background="@mipmap/button_normat"
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_marginTop="@dimen/layout_y_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Maxoutputlevel"
+            android:textColor="@color/bai"
+            android:textSize="@dimen/layout_x_20"
+            android:layout_gravity="center_vertical"/>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/layout_y_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/preferences_output1_btn"
+                android:layout_width="@dimen/layout_x_150"
+                android:layout_height="@dimen/layout_x_40"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:text="0"
+                android:textColor="@color/color_333"
+                android:background="@mipmap/button_normat"
+                />
+            <Button
+                android:layout_marginLeft="@dimen/layout_x_30"
+                android:id="@+id/preferences_output2_btn"
+                android:layout_width="@dimen/layout_x_150"
+                android:layout_height="@dimen/layout_x_40"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:text="+6"
+                android:textColor="@color/color_333"
+                android:background="@mipmap/button_normat"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
