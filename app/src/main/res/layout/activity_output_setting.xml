@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.haoke.bhzs.Utils.View.TouchMoveView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/outPutSeeting_touchMoveView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/background"
+    android:orientation="vertical"
     tools:context="com.haoke.bhzs.Control.OutputSetting.OutputSettingActivity">
+
     <include
         android:id="@+id/title"
         layout="@layout/layout_title" />
 
     <RelativeLayout
-        android:id="@+id/manager_top"
+        android:id="@+id/outputsetting_top"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/layout_y_60">
+        android:layout_height="@dimen/layout_y_60"
+        android:layout_below="@+id/title">
 
         <View
             android:id="@+id/adavanced_view"
@@ -32,10 +35,10 @@
 
             <com.haoke.bhzs.Utils.View.MyImageView
                 android:id="@+id/ouputseeting_home_image"
-                android:layout_marginLeft="@dimen/layout_x_15"
                 android:layout_width="@dimen/layout_x_30"
                 android:layout_height="@dimen/layout_x_30"
                 android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/layout_x_15"
                 android:clickable="true"
                 android:gravity="center"
                 android:scaleType="fitXY"
@@ -53,18 +56,20 @@
                 android:textColor="@color/bai"
                 android:textSize="@dimen/layout_x_23" />
         </LinearLayout>
+
         <com.haoke.bhzs.Utils.View.MyImageView
-            android:layout_toRightOf="@+id/outputsetting_home_lin"
             android:id="@+id/advanced_home_go"
-            android:layout_marginLeft="@dimen/layout_x_15"
             android:layout_width="@dimen/layout_x_25"
             android:layout_height="@dimen/layout_x_30"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/layout_x_15"
+            android:layout_toRightOf="@+id/outputsetting_home_lin"
             android:clickable="true"
             android:scaleType="fitXY"
             android:src="@mipmap/advance_normat"
             app:src_n="@mipmap/advance_normat"
             app:src_s="@mipmap/advance_pressed" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -78,105 +83,185 @@
     </RelativeLayout>
 
     <!--main-->
-    <com.haoke.bhzs.Utils.View.TouchMoveView
-        android:id="@+id/outPutSeeting_touchMoveView"
+
+    <RelativeLayout
+        android:id="@+id/outPutSeeting_parentView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/layout_y_85">
+
         <RelativeLayout
             android:id="@+id/outPutSeeting_touchMoveView_rl_top"
-            android:layout_marginTop="@dimen/layout_y_10"
-            android:layout_marginLeft="@dimen/layout_x_20"
-            android:layout_marginRight="@dimen/layout_x_20"
-            android:layout_marginBottom="@dimen/layout_y_10"
             android:layout_width="match_parent"
             android:layout_height="@dimen/layout_y_180"
-            android:background="@drawable/background_kuang">
-            <ImageView
-                android:id="@+id/outPutSeeting_top_woofer_image"
-                android:layout_marginTop="@dimen/layout_y_10"
-                android:layout_marginLeft="@dimen/layout_x_10"
-                android:layout_width="@dimen/layout_x_100"
-                android:layout_height="@dimen/layout_x_100"
-                android:scaleType="fitXY"
-                android:src="@mipmap/woofer_disabled"/>
+            android:layout_marginBottom="@dimen/layout_y_10"
+            android:layout_marginLeft="@dimen/layout_x_20"
+            android:layout_marginRight="@dimen/layout_x_20"
+            android:layout_marginTop="@dimen/layout_y_10"
+            android:background="@drawable/background_kuang" />
 
-            <ImageView
-                android:layout_toRightOf="@+id/outPutSeeting_top_woofer_image"
-                android:id="@+id/outPutSeeting_top_coax_image"
-                android:layout_marginTop="@dimen/layout_y_7"
-                android:layout_marginLeft="@dimen/layout_x_30"
-                android:layout_width="@dimen/layout_x_60"
-                android:layout_height="@dimen/layout_x_60"
-                android:scaleType="fitXY"
-                android:src="@mipmap/coax_disabled"/>
+        <ImageView
+            android:id="@+id/outPutSeeting_top_woofer_image"
+            android:layout_width="@dimen/layout_x_100"
+            android:layout_height="@dimen/layout_x_100"
+            android:layout_marginLeft="@dimen/layout_x_30"
+            android:layout_marginTop="@dimen/layout_y_20"
+            android:scaleType="fitXY"
+            android:src="@mipmap/woofer_normat"
+            android:translationZ="@dimen/layout_x_10" />
 
-            <ImageView
-                android:layout_toRightOf="@+id/outPutSeeting_top_coax_image"
-                android:id="@+id/outPutSeeting_top_tweeter_image"
-                android:layout_marginTop="@dimen/layout_y_5"
-                android:layout_marginLeft="@dimen/layout_x_30"
-                android:layout_width="@dimen/layout_x_30"
-                android:layout_height="@dimen/layout_x_30"
-                android:scaleType="fitXY"
-                android:src="@mipmap/tweeter_disabled"/>
+        <ImageView
+            android:id="@+id/outPutSeeting_top_mid_image"
+            android:layout_width="@dimen/layout_x_60"
+            android:layout_height="@dimen/layout_x_60"
+            android:layout_marginLeft="@dimen/layout_x_30"
+            android:layout_marginTop="@dimen/layout_y_17"
+            android:layout_toRightOf="@+id/outPutSeeting_top_woofer_image"
+            android:scaleType="fitXY"
+            android:src="@mipmap/mid_range_normat" />
 
-            <ImageView
-                android:layout_marginRight="@dimen/layout_x_50"
-                android:id="@+id/outPutSeeting_top_mid_image"
-                android:layout_marginTop="@dimen/layout_y_15"
-               android:layout_alignParentRight="true"
-                android:layout_width="@dimen/layout_x_60"
-                android:layout_height="@dimen/layout_x_60"
-                android:scaleType="fitXY"
-                android:src="@mipmap/mid_range_disabled"/>
+        <ImageView
+            android:id="@+id/outPutSeeting_top_tweeter_image"
+            android:layout_width="@dimen/layout_x_30"
+            android:layout_height="@dimen/layout_x_30"
+            android:layout_marginLeft="@dimen/layout_x_30"
+            android:layout_marginTop="@dimen/layout_y_15"
+            android:layout_toRightOf="@+id/outPutSeeting_top_mid_image"
+            android:scaleType="fitXY"
+            android:src="@mipmap/tweeter_normat" />
 
-            <ImageView
-                android:layout_below="@+id/outPutSeeting_top_mid_image"
-                android:layout_marginRight="@dimen/layout_x_50"
-                android:id="@+id/outPutSeeting_top_way_image"
-                android:layout_marginTop="@dimen/layout_y_15"
-                android:layout_alignParentRight="true"
-                android:layout_width="@dimen/layout_x_110"
-                android:layout_height="@dimen/layout_x_70"
-                android:scaleType="fitXY"
-                android:src="@mipmap/coax_center_way2_disabled"/>
+        <ImageView
+            android:id="@+id/outPutSeeting_top_coax_image"
+            android:layout_width="@dimen/layout_x_60"
+            android:layout_height="@dimen/layout_x_60"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/layout_x_60"
+            android:layout_marginTop="@dimen/layout_y_25"
+            android:scaleType="fitXY"
+            android:src="@mipmap/coax_normat" />
 
-            <ImageView
-                android:id="@+id/outPutSeeting_top_subwoofer_image"
-                android:layout_below="@+id/outPutSeeting_top_coax_image"
-                android:layout_toLeftOf="@+id/outPutSeeting_top_way_image"
-                android:layout_marginRight="@dimen/layout_x_30"
-                android:layout_marginTop="@dimen/layout_y_30"
-                android:layout_width="@dimen/layout_x_100"
-                android:layout_height="@dimen/layout_x_78"
-                android:scaleType="fitXY"
-                android:src="@mipmap/subwoofer_disabled"/>
-        </RelativeLayout>
+        <ImageView
+            android:id="@+id/outPutSeeting_top_way_image"
+            android:layout_width="@dimen/layout_x_110"
+            android:layout_height="@dimen/layout_x_70"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/outPutSeeting_top_mid_image"
+            android:layout_marginRight="@dimen/layout_x_60"
+            android:layout_marginTop="@dimen/layout_y_15"
+            android:scaleType="fitXY"
+            android:src="@mipmap/coax_center_way2_normat" />
+
+        <ImageView
+            android:id="@+id/outPutSeeting_top_subwoofer_image"
+            android:layout_width="@dimen/layout_x_100"
+            android:layout_height="@dimen/layout_x_78"
+            android:layout_below="@+id/outPutSeeting_top_coax_image"
+            android:layout_marginRight="@dimen/layout_x_30"
+            android:layout_marginTop="@dimen/layout_y_30"
+            android:layout_toLeftOf="@+id/outPutSeeting_top_way_image"
+            android:scaleType="fitXY"
+            android:src="@mipmap/subwoofer_normat" />
+
         <RelativeLayout
-            android:layout_below="@+id/outPutSeeting_touchMoveView_rl_top"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_below="@+id/outPutSeeting_touchMoveView_rl_top">
+
             <ImageView
-                android:layout_marginTop="@dimen/layout_y_10"
-                android:layout_marginBottom="@dimen/layout_y_25"
-                android:layout_centerHorizontal="true"
                 android:layout_width="@dimen/layout_x_240"
                 android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/layout_y_25"
+                android:layout_marginTop="@dimen/layout_y_10"
                 android:scaleType="fitXY"
-                android:src="@mipmap/background_car"/>
+                android:src="@mipmap/background_car" />
 
             <RelativeLayout
-                android:layout_marginTop="@dimen/layout_y_110"
                 android:layout_width="@dimen/layout_x_388"
                 android:layout_height="@dimen/layout_x_388"
                 android:layout_centerHorizontal="true"
-                >
+                android:layout_marginTop="@dimen/layout_y_110">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
-                    android:src="@mipmap/background_roundness"/>
+                    android:src="@mipmap/background_roundness" />
+
+
             </RelativeLayout>
         </RelativeLayout>
-    </com.haoke.bhzs.Utils.View.TouchMoveView>
-</LinearLayout>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/outPutSeeting_car_top_rel"
+        android:layout_below="@+id/outputsetting_top"
+        android:layout_marginTop="@dimen/layout_y_310"
+        android:layout_width="@dimen/layout_x_110"
+        android:layout_height="@dimen/layout_x_55"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/coax_center_normat">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/outputsetting_top"
+        android:id="@+id/outPutSeeting_car_top_left_rel"
+        android:layout_width="@dimen/layout_x_188"
+        android:layout_height="@dimen/layout_x_178"
+        android:layout_marginTop="@dimen/layout_y_320"
+        android:layout_marginLeft="@dimen/layout_x_45"
+        android:background="@mipmap/fl_normat">
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/outPutSeeting_car_top_right_rel"
+        android:layout_below="@+id/outputsetting_top"
+        android:layout_width="@dimen/layout_x_188"
+        android:layout_height="@dimen/layout_x_178"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/layout_y_320"
+        android:layout_marginRight="@dimen/layout_x_45"
+        android:background="@mipmap/fr_normat">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/outPutSeeting_car_bottom_left_rel"
+        android:layout_width="@dimen/layout_x_188"
+        android:layout_height="@dimen/layout_x_168"
+        android:layout_below="@+id/outPutSeeting_car_top_left_rel"
+        android:layout_marginLeft="@dimen/layout_x_45"
+        android:layout_marginTop="@dimen/layout_y_10"
+        android:background="@mipmap/rl_normat">
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/outPutSeeting_car_bottom_right_rel"
+        android:layout_width="@dimen/layout_x_188"
+        android:layout_height="@dimen/layout_x_168"
+        android:layout_below="@+id/outPutSeeting_car_top_right_rel"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/layout_x_45"
+        android:layout_marginTop="@dimen/layout_y_10"
+        android:background="@mipmap/rr_normat">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/outPutSeeting_car_bottom_rel"
+        android:layout_width="@dimen/layout_x_156"
+        android:layout_height="@dimen/layout_x_80"
+        android:layout_below="@+id/outPutSeeting_car_top_rel"
+        android:layout_marginTop="@dimen/layout_x_256"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/subwoofer_frame_normat">
+
+    </RelativeLayout>
+</com.haoke.bhzs.Utils.View.TouchMoveView>

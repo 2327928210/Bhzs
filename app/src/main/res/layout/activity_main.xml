@@ -25,7 +25,7 @@
             android:background="@color/color_aaa" />
 
         <LinearLayout
-            android:layout_width="@dimen/layout_x_120"
+            android:layout_width="@dimen/layout_x_140"
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
@@ -86,7 +86,7 @@
             <LinearLayout
                 android:id="@+id/main_myView1_lin1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/layout_y_45"
                 android:layout_centerHorizontal="true"
                 android:orientation="horizontal">
 
@@ -112,7 +112,6 @@
                 android:layout_height="@dimen/layout_x_180"
                 android:layout_below="@+id/main_myView1_lin1"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/layout_y_15"
                 android:background="@color/background"
                 app:Max="100"
                 app:nei_color="@color/colorLv"
@@ -133,7 +132,7 @@
             <LinearLayout
                 android:id="@+id/main_myView1_lin2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/layout_y_45"
                 android:layout_centerHorizontal="true"
                 android:orientation="horizontal">
 
@@ -159,7 +158,6 @@
                 android:layout_height="@dimen/layout_x_180"
                 android:layout_below="@+id/main_myView1_lin2"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/layout_y_15"
                 android:background="@color/background"
                 app:Max="100"
                 app:nei_color="@color/colorLv"
